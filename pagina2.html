@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para la Novia más Guapa de este Universo</title>
+    <style>
+        body {
+            background-color: #ffdde1;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            color: #d63384;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 20px;
+        }
+        p {
+            font-size: 2em; /* Texto más grande */
+            max-width: 600px;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        .image-container {
+            width: 300px; /* Ajusta el tamaño de la imagen */
+            margin: 10px 0;
+        }
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 2em;
+            animation: float 4s infinite ease-in-out;
+        }
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { transform: translateY(-200px); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Para la Novia más Guapa de este Universo</h1>
+
+    <p>Hola mi vida, quiero decirte que eres lo mejor que me ha pasado. Cada momento contigo es especial, y este San Valentín es más bonito porque lo comparto contigo. Eres mi felicidad y mi todo . Te amo mucho, Carolina Macias. 💖</p>
+
+    <!-- Imagen abajo del mensaje -->
+    <img src="Imagen de WhatsApp 2025-02-02 a las 22.37.19_8f73c8ef.jpg" alt="Imagen especial" class="image-container">
+
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.innerHTML = "❤️";
+            heart.classList.add("heart");
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.top = "100vh";
+            heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 4000);
+        }
+        setInterval(createHeart, 500);
+    </script>
+</body>
+</html>
